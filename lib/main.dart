@@ -1,5 +1,5 @@
 import 'package:e_book_ui_template/constants/app_strings.dart';
-import 'package:e_book_ui_template/screens/home_screen/home_screen.dart';
+import 'package:e_book_ui_template/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
