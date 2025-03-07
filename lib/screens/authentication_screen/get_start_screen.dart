@@ -4,7 +4,8 @@ import 'package:e_book_ui_template/constants/app_images.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/sign_in_email_screen.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/sign_in_phone_screen.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/signup_screen.dart';
-import 'package:e_book_ui_template/widgets/custom_button.dart';
+import 'package:e_book_ui_template/widgets/custom_elevated_button.dart';
+import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_strings.dart';
@@ -66,7 +67,7 @@ class GetStartScreen extends StatelessWidget {
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,
-                      child: CustomButton(
+                      child: CustomElevatedButton(
                         buttonText: AppStrings.signInWithPhoneNumber,
                         onPressed: () {
                           Navigator.push(
@@ -89,7 +90,7 @@ class GetStartScreen extends StatelessWidget {
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,
-                      child: CustomButton(
+                      child: CustomElevatedButton(
                         buttonText: AppStrings.signInWithEmail,
                         onPressed: () {
                           Navigator.push(
@@ -203,10 +204,8 @@ class GetStartScreen extends StatelessWidget {
                         maxLines: 1,
                         style: AppTextStyles.subtitle,
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          foregroundColor: AppColors.greenColor,
-                        ),
+                      CustomTextButton(
+                        text: AppStrings.signUp,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -215,10 +214,6 @@ class GetStartScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text(
-                          AppStrings.signUp,
-                          style: AppTextStyles.body,
-                        ),
                       ),
                     ],
                   ),

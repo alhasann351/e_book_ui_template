@@ -8,4 +8,5 @@ class AppImages {
   static const String appleIcon = 'assets/icons/apple.png';
   static const String facebookIcon = 'assets/icons/facebook.png';
   static const String googleIcon = 'assets/icons/google.png';
+  static const String appIcon = 'assets/icons/app_icon.png';
 }

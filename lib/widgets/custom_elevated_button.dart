@@ -2,10 +2,10 @@ import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomElevatedButton extends StatelessWidget {
   final String buttonText;
   final VoidCallback onPressed;
-  const CustomButton({
+  const CustomElevatedButton({
     super.key,
     required this.buttonText,
     required this.onPressed,

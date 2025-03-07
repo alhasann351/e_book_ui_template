@@ -1,11 +1,11 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/constants/app_colors.dart';
-import 'package:e_book_ui_template/constants/app_text_styles.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/get_start_screen.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_1.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_2.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_3.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_4.dart';
+import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -66,10 +66,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      foregroundColor: AppColors.greenColor,
-                    ),
+                  CustomTextButton(
+                    text: AppStrings.skip,
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -78,7 +76,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       );
                     },
-                    child: Text(AppStrings.skip, style: AppTextStyles.body),
                   ),
                   SmoothPageIndicator(
                     controller: _pageController,
@@ -89,10 +86,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   _currentIndex == 3
-                      ? TextButton(
-                        style: TextButton.styleFrom(
-                          foregroundColor: AppColors.greenColor,
-                        ),
+                      ? CustomTextButton(
+                        text: AppStrings.finish,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -101,10 +96,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                           );
                         },
-                        child: Text(
-                          AppStrings.finish,
-                          style: AppTextStyles.body,
-                        ),
                       )
                       : IconButton(
                         color: AppColors.greenColor,

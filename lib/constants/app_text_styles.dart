@@ -17,6 +17,18 @@ class AppTextStyles {
 
   static TextStyle body = TextStyle(fontSize: 16, fontFamily: 'amaranth');
 
+  static TextStyle inputTextStyle = TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    color: AppColors.blackColor,
+  );
+
+  static TextStyle hintTextStyle = TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    color: AppColors.greyColor,
+  );
+
   static TextStyle buttonTextStyle = TextStyle(
     fontSize: 18,
     fontFamily: 'amaranth',
