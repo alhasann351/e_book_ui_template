@@ -1,0 +1,234 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:e_book_ui_template/constants/app_colors.dart';
+import 'package:e_book_ui_template/constants/app_images.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/sign_in_email_screen.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/sign_in_phone_screen.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/signup_screen.dart';
+import 'package:e_book_ui_template/widgets/custom_button.dart';
+import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
+import '../../constants/app_text_styles.dart';
+
+class GetStartScreen extends StatelessWidget {
+  const GetStartScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 15),
+                SlideInDown(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Text(
+                    AppStrings.getStart,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: AppTextStyles.title,
+                  ),
+                ),
+                SizedBox(height: 10),
+                SlideInDown(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Text(
+                    AppStrings.appTitle,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: AppTextStyles.subtitle,
+                  ),
+                ),
+                SizedBox(height: 25),
+                ZoomIn(
+                  animate: true,
+                  duration: Duration(seconds: 4),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(250),
+                    child: Image.asset(
+                      AppImages.getStartedImage,
+                      width: 250,
+                      height: 250,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25),
+                SlideInLeft(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: SizedBox(
+                      height: 50,
+                      width: double.infinity,
+                      child: CustomButton(
+                        buttonText: AppStrings.signInWithPhoneNumber,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignInPhoneScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25),
+                SlideInRight(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: SizedBox(
+                      height: 50,
+                      width: double.infinity,
+                      child: CustomButton(
+                        buttonText: AppStrings.signInWithEmail,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignInEmailScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25),
+                ZoomIn(
+                  animate: true,
+                  duration: Duration(seconds: 4),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 10),
+                          child: Divider(
+                            thickness: 2,
+                            color: AppColors.greyColor,
+                          ),
+                        ),
+                      ),
+                      Text(AppStrings.or, style: AppTextStyles.subtitle),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20, left: 10),
+                          child: Divider(
+                            thickness: 2,
+                            color: AppColors.greyColor,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 25),
+                SlideInUp(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {},
+                        child: Card(
+                          color: AppColors.whiteColor,
+                          elevation: 8,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Image.asset(
+                              AppImages.appleIcon,
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {},
+                        child: Card(
+                          color: AppColors.whiteColor,
+                          elevation: 8,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Image.asset(
+                              AppImages.facebookIcon,
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {},
+                        child: Card(
+                          color: AppColors.whiteColor,
+                          elevation: 8,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Image.asset(
+                              AppImages.googleIcon,
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 25),
+                SlideInUp(
+                  animate: true,
+                  duration: Duration(seconds: 2),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        AppStrings.doNotAccount,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: AppTextStyles.subtitle,
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          foregroundColor: AppColors.greenColor,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          AppStrings.signUp,
+                          style: AppTextStyles.body,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

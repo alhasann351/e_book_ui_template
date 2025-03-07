@@ -6,7 +6,6 @@ class AppTextStyles {
     fontSize: 22,
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
-    color: AppColors.blackColor,
   );
 
   static TextStyle subtitle = TextStyle(
@@ -16,9 +15,12 @@ class AppTextStyles {
     color: AppColors.greyColor,
   );
 
-  static TextStyle body = TextStyle(
-    fontSize: 16,
+  static TextStyle body = TextStyle(fontSize: 16, fontFamily: 'amaranth');
+
+  static TextStyle buttonTextStyle = TextStyle(
+    fontSize: 18,
     fontFamily: 'amaranth',
-    color: AppColors.blackColor,
+    fontWeight: FontWeight.bold,
+    color: AppColors.whiteColor,
   );
 }

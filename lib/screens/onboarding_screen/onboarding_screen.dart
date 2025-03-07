@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/get_start_screen.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_1.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_2.dart';
 import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_screen_3.dart';
@@ -9,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constants/app_strings.dart';
-import '../home_screen/home_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -42,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.blueAccentColor,
+      //backgroundColor: AppColors.blueAccentColor,
       body: Stack(
         children: [
           PageView(
@@ -73,7 +73,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                        MaterialPageRoute(
+                          builder: (context) => GetStartScreen(),
+                        ),
                       );
                     },
                     child: Text(AppStrings.skip, style: AppTextStyles.body),
@@ -87,7 +89,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   _currentIndex == 3
-                      ? const SizedBox()
+                      ? TextButton(
+                        style: TextButton.styleFrom(
+                          foregroundColor: AppColors.greenColor,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => GetStartScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          AppStrings.finish,
+                          style: AppTextStyles.body,
+                        ),
+                      )
                       : IconButton(
                         color: AppColors.greenColor,
                         onPressed: () {

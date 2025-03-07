@@ -11,7 +11,7 @@ class OnboardingScreen4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 0, bottom: 100, left: 10, right: 10),
+      padding: EdgeInsets.only(bottom: 100, left: 20, right: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -22,8 +22,8 @@ class OnboardingScreen4 extends StatelessWidget {
               borderRadius: BorderRadius.circular(250),
               child: Image.asset(
                 AppImages.onboardingImage4,
-                cacheHeight: 250,
-                cacheWidth: 250,
+                width: 250,
+                height: 250,
                 fit: BoxFit.cover,
               ),
             ),
@@ -37,7 +37,7 @@ class OnboardingScreen4 extends StatelessWidget {
               style: AppTextStyles.title,
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           SlideInRight(
             animate: true,
             duration: Duration(seconds: 2),

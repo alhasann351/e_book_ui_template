@@ -1,6 +1,7 @@
 class AppStrings {
   static const String appTitle = 'E-Book UI Template';
   static const String skip = 'Skip';
+  static const String finish = 'Finish';
   static const String onboardingScreenTitle1 = 'Seamless Reading Experience';
   static const String onboardingScreenTitle2 = 'Listen & Learn Anytime';
   static const String onboardingScreenTitle3 = 'Discover a Vast Library';
@@ -13,4 +14,10 @@ class AppStrings {
       'Explore a diverse collection of books and find what you love';
   static const String onboardingScreenSubtitle4 =
       'Get specially crafted recommendations that are customized just for you, based on your interests, preferences, and past reading or listening experiences';
+  static const String getStart = 'Get Started';
+  static const String signInWithPhoneNumber = 'Sign in with phone number';
+  static const String signInWithEmail = 'Sign in with email';
+  static const String or = 'or';
+  static const String doNotAccount = "Don't have an account?";
+  static const String signUp = 'Sign up';
 }

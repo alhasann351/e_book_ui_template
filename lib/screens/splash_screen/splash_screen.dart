@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/app_colors.dart';
 import '../../constants/app_images.dart';
 import '../../constants/app_strings.dart';
 import '../../constants/app_text_styles.dart';
@@ -21,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 6), () {
-      Navigator.pushReplacement(
+      Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const OnboardingScreen()),
       );
@@ -32,7 +31,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.blueAccentColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,11 +48,16 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Image.asset(
                     AppImages.splashImage,
-                    cacheHeight: 50,
-                    cacheWidth: 50,
+                    height: 50,
+                    width: 50,
                     fit: BoxFit.cover,
                   ),
-                  Text(AppStrings.appTitle, style: AppTextStyles.title),
+                  Text(
+                    AppStrings.appTitle,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: AppTextStyles.title,
+                  ),
                 ],
               ),
             ),
