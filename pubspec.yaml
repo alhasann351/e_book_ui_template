@@ -38,6 +38,7 @@ dependencies:
   animate_do:
   smooth_page_indicator:
   provider: ^6.1.2
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_test:

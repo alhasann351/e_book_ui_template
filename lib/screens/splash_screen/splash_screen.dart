@@ -54,7 +54,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   Text(
                     AppStrings.appTitle,
-                    overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: AppTextStyles.title,
                   ),

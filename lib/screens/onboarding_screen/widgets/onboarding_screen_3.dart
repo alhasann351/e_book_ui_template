@@ -44,7 +44,6 @@ class OnboardingScreen3 extends StatelessWidget {
             child: Text(
               AppStrings.onboardingScreenSubtitle3,
               textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
               maxLines: 4,
               style: AppTextStyles.subtitle,
             ),

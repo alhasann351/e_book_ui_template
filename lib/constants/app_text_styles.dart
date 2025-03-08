@@ -6,6 +6,7 @@ class AppTextStyles {
     fontSize: 22,
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
   );
 
   static TextStyle subtitle = TextStyle(
@@ -13,20 +14,26 @@ class AppTextStyles {
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
     color: AppColors.greyColor,
+    overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle body = TextStyle(fontSize: 16, fontFamily: 'amaranth');
+  static TextStyle body = TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    overflow: TextOverflow.ellipsis,
+  );
 
   static TextStyle inputTextStyle = TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
-    color: AppColors.blackColor,
+    overflow: TextOverflow.ellipsis,
   );
 
   static TextStyle hintTextStyle = TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
     color: AppColors.greyColor,
+    overflow: TextOverflow.ellipsis,
   );
 
   static TextStyle buttonTextStyle = TextStyle(
@@ -34,5 +41,6 @@ class AppTextStyles {
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
     color: AppColors.whiteColor,
+    overflow: TextOverflow.ellipsis,
   );
 }

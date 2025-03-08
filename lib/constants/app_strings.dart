@@ -19,10 +19,16 @@ class AppStrings {
   static const String signInWithEmail = 'Sign in with email';
   static const String or = 'or';
   static const String doNotAccount = "Don't have an account?";
+  static const String alreadyAccount = "Already have an account?";
   static const String signUp = 'Sign up';
   static const String signInAccount = 'Sign in your account';
   static const String email = 'Email';
   static const String password = 'Password';
   static const String forgotPassword = 'Forgot password?';
   static const String signIn = 'Sign in';
+  static const String createAccount = 'Create your new account';
+  static const String name = 'Name';
+  static const String rememberMe = 'Remember me';
+  static const String phone = 'Phone';
+  static const String search = 'Search';
 }

@@ -60,8 +60,6 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                       cursorColor: AppColors.greenColor,
                       style: AppTextStyles.inputTextStyle,
                       decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
                         hintText: AppStrings.email,
                         hintStyle: AppTextStyles.hintTextStyle,
                         prefixIcon: Icon(
@@ -93,8 +91,6 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                       style: AppTextStyles.inputTextStyle,
                       obscureText: showPassword,
                       decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
                         hintText: AppStrings.password,
                         hintStyle: AppTextStyles.hintTextStyle,
                         prefixIcon: Icon(
@@ -270,7 +266,6 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     children: [
                       Text(
                         AppStrings.doNotAccount,
-                        overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: AppTextStyles.subtitle,
                       ),
