@@ -9,4 +9,6 @@ class AppImages {
   static const String facebookIcon = 'assets/icons/facebook.png';
   static const String googleIcon = 'assets/icons/google.png';
   static const String appIcon = 'assets/icons/app_icon.png';
+  static const String otpVerificationImage =
+      'assets/images/otp_verification_image.jpg';
 }

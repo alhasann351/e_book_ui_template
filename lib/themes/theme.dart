@@ -5,14 +5,15 @@ import '../constants/app_colors.dart';
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: AppColors.blueAccentColor,
-  inputDecorationTheme: InputDecorationTheme(
+  appBarTheme: const AppBarTheme(backgroundColor: AppColors.blueAccentColor),
+  inputDecorationTheme: const InputDecorationTheme(
     filled: true,
     fillColor: AppColors.whiteColor,
   ),
-  checkboxTheme: CheckboxThemeData(
+  checkboxTheme: const CheckboxThemeData(
     side: BorderSide(width: 2, color: AppColors.blackColor),
   ),
-  cardTheme: CardThemeData(color: AppColors.whiteColor),
+  cardTheme: const CardThemeData(color: AppColors.whiteColor),
   dialogTheme: DialogThemeData(
     backgroundColor: AppColors.blueAccentColor,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -22,11 +23,12 @@ ThemeData lightTheme = ThemeData(
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: AppColors.midnightBlueColor,
+  appBarTheme: const AppBarTheme(backgroundColor: AppColors.midnightBlueColor),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: AppColors.filledColor,
   ),
-  checkboxTheme: CheckboxThemeData(
+  checkboxTheme: const CheckboxThemeData(
     side: BorderSide(width: 2, color: AppColors.whiteColor),
   ),
   cardTheme: CardThemeData(color: AppColors.filledColor),

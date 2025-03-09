@@ -7,7 +7,7 @@ class Loading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 50,
       width: 50,
       child: LoadingIndicator(

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

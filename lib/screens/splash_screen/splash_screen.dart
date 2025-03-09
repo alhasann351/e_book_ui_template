@@ -19,7 +19,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 6), () {
+    Timer(const Duration(seconds: 6), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const OnboardingScreen()),
@@ -35,12 +35,12 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           Expanded(
             flex: 4,
             child: SlideInLeft(
               animate: true,
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,10 +65,10 @@ class _SplashScreenState extends State<SplashScreen> {
             flex: 1,
             child: SlideInRight(
               animate: true,
-              duration: Duration(seconds: 2),
-              child: Align(
+              duration: const Duration(seconds: 2),
+              child: const Align(
                 alignment: Alignment.topCenter,
-                child: const Loading(),
+                child: Loading(),
               ),
             ),
           ),

@@ -2,14 +2,21 @@ import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
-  static TextStyle title = TextStyle(
+  static TextStyle appBarTitle = const TextStyle(
+    fontSize: 20,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+  );
+
+  static TextStyle title = const TextStyle(
     fontSize: 22,
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
     overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle subtitle = TextStyle(
+  static TextStyle subtitle = const TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,
@@ -17,26 +24,26 @@ class AppTextStyles {
     overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle body = TextStyle(
+  static TextStyle body = const TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
     overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle inputTextStyle = TextStyle(
+  static TextStyle inputTextStyle = const TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
     overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle hintTextStyle = TextStyle(
+  static TextStyle hintTextStyle = const TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',
     color: AppColors.greyColor,
     overflow: TextOverflow.ellipsis,
   );
 
-  static TextStyle buttonTextStyle = TextStyle(
+  static TextStyle buttonTextStyle = const TextStyle(
     fontSize: 18,
     fontFamily: 'amaranth',
     fontWeight: FontWeight.bold,

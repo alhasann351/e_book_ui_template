@@ -31,10 +31,10 @@ class _SignupScreenState extends State<SignupScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInDown(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Image.asset(
                     AppImages.appIcon,
                     width: 100,
@@ -42,25 +42,25 @@ class _SignupScreenState extends State<SignupScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Text(
                     AppStrings.createAccount,
                     style: AppTextStyles.title,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: IntlPhoneField(
                       pickerDialogStyle: PickerDialogStyle(
                         searchFieldInputDecoration: InputDecoration(
-                          icon: Icon(Icons.search_outlined),
+                          icon: const Icon(Icons.search_outlined),
                           hintText: AppStrings.search,
                           hintStyle: AppTextStyles.hintTextStyle,
                           enabledBorder: OutlineInputBorder(
@@ -68,7 +68,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: AppColors.greenColor,
                               width: 2,
                             ),
@@ -90,7 +90,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.phone,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.person_2_outlined,
                           size: 28,
                           color: AppColors.greyColor,
@@ -100,14 +100,14 @@ class _SignupScreenState extends State<SignupScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: AppColors.greenColor,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedErrorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: AppColors.redColor,
                             width: 2,
                           ),
@@ -117,10 +117,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInRight(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextFormField(
@@ -130,7 +130,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.name,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.person_2_outlined,
                           size: 28,
                           color: AppColors.greyColor,
@@ -140,17 +140,20 @@ class _SignupScreenState extends State<SignupScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green, width: 2),
+                          borderSide: const BorderSide(
+                            color: Colors.green,
+                            width: 2,
+                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextFormField(
@@ -160,7 +163,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.email,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.email_outlined,
                           size: 28,
                           color: AppColors.greyColor,
@@ -170,17 +173,20 @@ class _SignupScreenState extends State<SignupScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green, width: 2),
+                          borderSide: const BorderSide(
+                            color: Colors.green,
+                            width: 2,
+                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInRight(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextFormField(
@@ -191,7 +197,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.password,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock_outline_rounded,
                           size: 28,
                           color: AppColors.greyColor,
@@ -216,17 +222,20 @@ class _SignupScreenState extends State<SignupScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green, width: 2),
+                          borderSide: const BorderSide(
+                            color: Colors.green,
+                            width: 2,
+                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Padding(
                     padding: const EdgeInsets.only(right: 20),
                     child: Row(
@@ -247,10 +256,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
@@ -262,7 +271,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
+                              builder: (context) => const HomeScreen(),
                             ),
                           );
                         },
@@ -270,16 +279,16 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 10),
+                          padding: EdgeInsets.only(left: 20, right: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -287,9 +296,9 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                       Text(AppStrings.or, style: AppTextStyles.subtitle),
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(right: 20, left: 10),
+                          padding: EdgeInsets.only(right: 20, left: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -299,10 +308,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -313,7 +322,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.appleIcon,
                               height: 30,
@@ -329,7 +338,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.facebookIcon,
                               height: 30,
@@ -345,7 +354,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.googleIcon,
                               height: 30,
@@ -357,10 +366,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -375,7 +384,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignInEmailScreen(),
+                              builder: (context) => const SignInEmailScreen(),
                             ),
                           );
                         },
@@ -383,7 +392,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
             ),
           ),

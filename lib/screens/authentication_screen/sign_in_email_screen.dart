@@ -29,10 +29,10 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInDown(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Image.asset(
                     AppImages.appIcon,
                     width: 100,
@@ -40,19 +40,19 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Text(
                     AppStrings.signInAccount,
                     style: AppTextStyles.title,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInRight(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextFormField(
@@ -62,7 +62,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.email,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.email_outlined,
                           size: 28,
                           color: AppColors.greyColor,
@@ -72,17 +72,20 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green, width: 2),
+                          borderSide: const BorderSide(
+                            color: Colors.green,
+                            width: 2,
+                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextFormField(
@@ -93,7 +96,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                       decoration: InputDecoration(
                         hintText: AppStrings.password,
                         hintStyle: AppTextStyles.hintTextStyle,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock_outline_rounded,
                           size: 28,
                           color: AppColors.greyColor,
@@ -118,17 +121,20 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green, width: 2),
+                          borderSide: const BorderSide(
+                            color: Colors.green,
+                            width: 2,
+                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 SlideInRight(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(right: 20),
                     child: Align(
@@ -139,7 +145,8 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ForgotPasswordScreen(),
+                              builder:
+                                  (context) => const ForgotPasswordScreen(),
                             ),
                           );
                         },
@@ -147,10 +154,10 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
@@ -162,7 +169,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
+                              builder: (context) => const HomeScreen(),
                             ),
                           );
                         },
@@ -170,16 +177,16 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 10),
+                          padding: EdgeInsets.only(left: 20, right: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -187,9 +194,9 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                         ),
                       ),
                       Text(AppStrings.or, style: AppTextStyles.subtitle),
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(right: 20, left: 10),
+                          padding: EdgeInsets.only(right: 20, left: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -199,10 +206,10 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -213,7 +220,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.appleIcon,
                               height: 30,
@@ -229,7 +236,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.facebookIcon,
                               height: 30,
@@ -245,7 +252,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.googleIcon,
                               height: 30,
@@ -257,10 +264,10 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -275,7 +282,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignupScreen(),
+                              builder: (context) => const SignupScreen(),
                             ),
                           );
                         },
@@ -283,7 +290,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
             ),
           ),

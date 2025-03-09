@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator:
   provider: ^6.1.2
   intl_phone_field: ^3.2.0
+  pinput: ^5.0.1
 
 dev_dependencies:
   flutter_test:

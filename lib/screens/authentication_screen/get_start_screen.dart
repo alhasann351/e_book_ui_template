@@ -22,10 +22,10 @@ class GetStartScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SlideInDown(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Text(
                     AppStrings.getStart,
                     overflow: TextOverflow.ellipsis,
@@ -33,10 +33,10 @@ class GetStartScreen extends StatelessWidget {
                     style: AppTextStyles.title,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SlideInDown(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Text(
                     AppStrings.appTitle,
                     overflow: TextOverflow.ellipsis,
@@ -44,10 +44,10 @@ class GetStartScreen extends StatelessWidget {
                     style: AppTextStyles.subtitle,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(250),
                     child: Image.asset(
@@ -58,10 +58,10 @@ class GetStartScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInLeft(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
@@ -73,7 +73,7 @@ class GetStartScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignInPhoneScreen(),
+                              builder: (context) => const SignInPhoneScreen(),
                             ),
                           );
                         },
@@ -81,10 +81,10 @@ class GetStartScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInRight(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
@@ -96,7 +96,7 @@ class GetStartScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignInEmailScreen(),
+                              builder: (context) => const SignInEmailScreen(),
                             ),
                           );
                         },
@@ -104,16 +104,16 @@ class GetStartScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ZoomIn(
                   animate: true,
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 10),
+                          padding: EdgeInsets.only(left: 20, right: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -121,9 +121,9 @@ class GetStartScreen extends StatelessWidget {
                         ),
                       ),
                       Text(AppStrings.or, style: AppTextStyles.subtitle),
-                      Expanded(
+                      const Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(right: 20, left: 10),
+                          padding: EdgeInsets.only(right: 20, left: 10),
                           child: Divider(
                             thickness: 2,
                             color: AppColors.greyColor,
@@ -133,10 +133,10 @@ class GetStartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -147,7 +147,7 @@ class GetStartScreen extends StatelessWidget {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.appleIcon,
                               height: 30,
@@ -163,7 +163,7 @@ class GetStartScreen extends StatelessWidget {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.facebookIcon,
                               height: 30,
@@ -179,7 +179,7 @@ class GetStartScreen extends StatelessWidget {
                           color: AppColors.whiteColor,
                           elevation: 8,
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Image.asset(
                               AppImages.googleIcon,
                               height: 30,
@@ -191,10 +191,10 @@ class GetStartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 SlideInUp(
                   animate: true,
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -210,7 +210,7 @@ class GetStartScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignupScreen(),
+                              builder: (context) => const SignupScreen(),
                             ),
                           );
                         },
@@ -218,7 +218,7 @@ class GetStartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
             ),
           ),

@@ -11,13 +11,13 @@ class OnboardingScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 100, left: 20, right: 20),
+      padding: const EdgeInsets.only(bottom: 100, left: 20, right: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SlideInDown(
             animate: true,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(250),
               child: Image.asset(
@@ -28,19 +28,19 @@ class OnboardingScreen1 extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           SlideInLeft(
             animate: true,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             child: Text(
               AppStrings.onboardingScreenTitle1,
               style: AppTextStyles.title,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           SlideInRight(
             animate: true,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             child: Text(
               AppStrings.onboardingScreenSubtitle1,
               textAlign: TextAlign.center,

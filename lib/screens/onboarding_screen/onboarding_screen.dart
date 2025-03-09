@@ -50,18 +50,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               _currentIndex;
             },
             children: [
-              OnboardingScreen1(),
-              OnboardingScreen2(),
-              OnboardingScreen3(),
-              OnboardingScreen4(),
+              const OnboardingScreen1(),
+              const OnboardingScreen2(),
+              const OnboardingScreen3(),
+              const OnboardingScreen4(),
             ],
           ),
 
           SlideInUp(
             animate: true,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
             child: Container(
-              alignment: Alignment(0, 0.8),
+              alignment: const Alignment(0, 0.8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -71,7 +71,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => GetStartScreen(),
+                          builder: (context) => const GetStartScreen(),
                         ),
                       );
                     },
@@ -91,7 +91,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => GetStartScreen(),
+                              builder: (context) => const GetStartScreen(),
                             ),
                           );
                         },
@@ -100,11 +100,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         color: AppColors.greenColor,
                         onPressed: () {
                           _pageController.nextPage(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             curve: Curves.decelerate,
                           );
                         },
-                        icon: SizedBox(
+                        icon: const SizedBox(
                           height: 50,
                           width: 50,
                           child: CircleAvatar(

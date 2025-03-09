@@ -9,7 +9,7 @@ class AppColors {
   static const Color greyColor = Color(0xFF808080);
   static const Color blueAccentColor = Color(0xFFE3F2FD);
   static const Color midnightBlueColor = Color(0xFF09122C);
-  static Color filledColor = Color(
+  static Color filledColor = const Color(
     0xFF09122C,
   ).withValues(green: 0.4, red: 0.4, blue: 0.4, alpha: 0.2);
 }

@@ -31,4 +31,11 @@ class AppStrings {
   static const String rememberMe = 'Remember me';
   static const String phone = 'Phone';
   static const String search = 'Search';
+  static const String loginYourAccount = 'Login your account';
+  static const String otpVerification = 'OTP verification';
+  static const String verificationTitle = 'Verification';
+  static const String verificationSubtitle = 'Enter your OTP code number';
+  static const String verify = 'Verify';
+  static const String doNotReceiveCode = "Didn't you receive any code?";
+  static const String resendCode = 'Resend new code';
 }
