@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:e_book_ui_template/screens/authentication_screen/otp_verification_screen.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/password_create_successful_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_colors.dart';
@@ -9,8 +9,15 @@ import '../../constants/app_text_styles.dart';
 import '../../widgets/app_bar_with_back.dart';
 import '../../widgets/custom_elevated_button.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({super.key});
+class CreatePasswordScreen extends StatefulWidget {
+  const CreatePasswordScreen({super.key});
+
+  @override
+  State<CreatePasswordScreen> createState() => _CreatePasswordScreenState();
+}
+
+class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
+  bool showPassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,25 +28,22 @@ class ForgotPasswordScreen extends StatelessWidget {
             SlideInLeft(
               animate: true,
               duration: const Duration(seconds: 2),
-              child: const AppBarWithBack(
-                title: AppStrings.forgotPasswordTitle,
-              ),
+              child: const AppBarWithBack(title: AppStrings.passwordTitle),
             ),
             Expanded(
               child: Center(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      const SizedBox(height: 15),
                       SlideInDown(
                         animate: true,
                         duration: const Duration(seconds: 2),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(180),
+                          borderRadius: BorderRadius.circular(250),
                           child: Image.asset(
-                            AppImages.forgotPasswordImage,
-                            width: 180,
+                            AppImages.passwordImage,
                             height: 180,
+                            width: 180,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -48,33 +52,58 @@ class ForgotPasswordScreen extends StatelessWidget {
                       ZoomIn(
                         animate: true,
                         duration: const Duration(seconds: 4),
+                        child: Text(
+                          AppStrings.createPassword,
+                          style: AppTextStyles.appBarTitle,
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      ZoomIn(
+                        animate: true,
+                        duration: const Duration(seconds: 4),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 20, right: 20),
                           child: Text(
-                            AppStrings.forgotPasswordSubtitle,
+                            AppStrings.passwordSubtitle,
                             textAlign: TextAlign.center,
                             maxLines: 3,
                             style: AppTextStyles.subtitle,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 25),
+                      const SizedBox(height: 35),
                       SlideInRight(
                         animate: true,
                         duration: const Duration(seconds: 2),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 20, right: 20),
                           child: TextFormField(
-                            keyboardType: TextInputType.phone,
+                            keyboardType: TextInputType.text,
                             cursorColor: AppColors.greenColor,
                             style: AppTextStyles.inputTextStyle,
+                            obscureText: showPassword,
                             decoration: InputDecoration(
-                              hintText: AppStrings.phone,
+                              hintText: AppStrings.password,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Icons.lock_outline_rounded,
                                 size: 28,
                                 color: AppColors.greyColor,
+                              ),
+                              suffixIcon: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                                radius: 10,
+                                child: Icon(
+                                  showPassword
+                                      ? Icons.visibility_off_outlined
+                                      : Icons.visibility_outlined,
+                                  color: AppColors.greyColor,
+                                  size: 28,
+                                ),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide.none,
@@ -92,31 +121,38 @@ class ForgotPasswordScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15),
-                      ZoomIn(
-                        animate: true,
-                        duration: const Duration(seconds: 4),
-                        child: Text(
-                          AppStrings.or,
-                          style: AppTextStyles.subtitle,
-                        ),
-                      ),
-                      const SizedBox(height: 15),
-                      SlideInLeft(
+                      SlideInRight(
                         animate: true,
                         duration: const Duration(seconds: 2),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 20, right: 20),
                           child: TextFormField(
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.text,
                             cursorColor: AppColors.greenColor,
                             style: AppTextStyles.inputTextStyle,
+                            obscureText: showPassword,
                             decoration: InputDecoration(
-                              hintText: AppStrings.email,
+                              hintText: AppStrings.confirmPassword,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Icons.lock_outline_rounded,
                                 size: 28,
                                 color: AppColors.greyColor,
+                              ),
+                              suffixIcon: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                                radius: 10,
+                                child: Icon(
+                                  showPassword
+                                      ? Icons.visibility_off_outlined
+                                      : Icons.visibility_outlined,
+                                  color: AppColors.greyColor,
+                                  size: 28,
+                                ),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide.none,
@@ -143,14 +179,14 @@ class ForgotPasswordScreen extends StatelessWidget {
                             height: 50,
                             width: double.infinity,
                             child: CustomElevatedButton(
-                              buttonText: AppStrings.send,
+                              buttonText: AppStrings.confirm,
                               onPressed: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder:
                                         (context) =>
-                                            const OtpVerificationScreen(),
+                                            const PasswordCreateSuccessfulScreen(),
                                   ),
                                 );
                               },

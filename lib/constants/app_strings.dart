@@ -24,7 +24,15 @@ class AppStrings {
   static const String signInAccount = 'Sign in your account';
   static const String email = 'Email';
   static const String password = 'Password';
+  static const String congratulationsTitle = 'Congratulations';
+  static const String congratulationsSubtitle =
+      'Your new password create has been successfully';
+  static const String confirmPassword = 'Confirm password';
+  static const String send = 'Send';
   static const String forgotPassword = 'Forgot password?';
+  static const String forgotPasswordTitle = 'Forgot password';
+  static const String forgotPasswordSubtitle =
+      'Please enter your phone number or email address to receive verification code';
   static const String signIn = 'Sign in';
   static const String createAccount = 'Create your new account';
   static const String name = 'Name';
@@ -36,6 +44,16 @@ class AppStrings {
   static const String verificationTitle = 'Verification';
   static const String verificationSubtitle = 'Enter your OTP code number';
   static const String verify = 'Verify';
+  static const String verified = 'Verified';
+  static const String verifiedSuccess =
+      'Your verification has been successfully';
+  static const String done = 'Done';
   static const String doNotReceiveCode = "Didn't you receive any code?";
   static const String resendCode = 'Resend new code';
+  static const String passwordTitle = 'New Password';
+  static const String createPassword = 'Create password';
+  static const String continueText = 'Continue';
+  static const String confirm = 'Confirm';
+  static const String passwordSubtitle =
+      'Add a password to make your account more secure';
 }

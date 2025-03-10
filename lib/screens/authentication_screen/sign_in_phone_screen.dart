@@ -29,7 +29,11 @@ class _SignInPhoneScreenState extends State<SignInPhoneScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const AppBarWithBack(title: ''),
+            SlideInLeft(
+              animate: true,
+              duration: const Duration(seconds: 2),
+              child: const AppBarWithBack(title: ''),
+            ),
             Expanded(
               child: Center(
                 child: SingleChildScrollView(

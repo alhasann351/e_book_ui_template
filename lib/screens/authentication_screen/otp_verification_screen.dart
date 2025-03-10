@@ -3,6 +3,7 @@ import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_images.dart';
 import 'package:e_book_ui_template/constants/app_strings.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
+import 'package:e_book_ui_template/screens/authentication_screen/verification_done_screen.dart';
 import 'package:e_book_ui_template/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
@@ -12,7 +13,6 @@ import '../../themes/theme.dart';
 import '../../themes/theme_provider.dart';
 import '../../widgets/app_bar_with_back.dart';
 import '../../widgets/custom_text_button.dart';
-import 'create_pin_screen.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
   const OtpVerificationScreen({super.key});
@@ -26,7 +26,11 @@ class OtpVerificationScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const AppBarWithBack(title: AppStrings.otpVerification),
+            SlideInLeft(
+              animate: true,
+              duration: const Duration(seconds: 2),
+              child: const AppBarWithBack(title: AppStrings.otpVerification),
+            ),
             Expanded(
               child: Center(
                 child: SingleChildScrollView(
@@ -123,7 +127,8 @@ class OtpVerificationScreen extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                     builder:
-                                        (context) => const CreatePinScreen(),
+                                        (context) =>
+                                            const VerificationDoneScreen(),
                                   ),
                                 );
                               },
