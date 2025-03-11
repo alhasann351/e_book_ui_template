@@ -56,4 +56,10 @@ class AppStrings {
   static const String confirm = 'Confirm';
   static const String passwordSubtitle =
       'Add a password to make your account more secure';
+  static const String home = 'Home';
+  static const String bestSellers = 'Best sellers';
+  static const String shortStory = 'Short story';
+  static const String moreBooks = 'More books';
+  static const String profile = 'Profile';
+  static const String homeAppbarTitle = 'E-Book';
 }

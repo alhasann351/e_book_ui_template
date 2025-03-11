@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/sign_in_email_screen.dart';
+import 'package:e_book_ui_template/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
@@ -11,7 +12,6 @@ import '../../constants/app_text_styles.dart';
 import '../../widgets/app_bar_with_back.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_button.dart';
-import '../home_screen/home_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -283,7 +283,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const HomeScreen(),
+                                    builder: (context) => const BottomNavBar(),
                                   ),
                                 );
                               },

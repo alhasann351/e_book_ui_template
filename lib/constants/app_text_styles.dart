@@ -50,4 +50,10 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     overflow: TextOverflow.ellipsis,
   );
+
+  static TextStyle bottomNavBarStyle = const TextStyle(
+    fontSize: 14,
+    fontFamily: 'amaranth',
+    overflow: TextOverflow.ellipsis,
+  );
 }

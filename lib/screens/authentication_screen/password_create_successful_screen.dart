@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:e_book_ui_template/screens/home_screen/home_screen.dart';
+import 'package:e_book_ui_template/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_images.dart';
@@ -69,7 +69,7 @@ class PasswordCreateSuccessfulScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const BottomNavBar(),
                             ),
                           );
                         },

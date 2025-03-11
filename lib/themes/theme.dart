@@ -5,7 +5,16 @@ import '../constants/app_colors.dart';
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: AppColors.blueAccentColor,
-  appBarTheme: const AppBarTheme(backgroundColor: AppColors.blueAccentColor),
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: AppColors.blackColor),
+    bodyMedium: TextStyle(color: AppColors.blackColor),
+    bodySmall: TextStyle(color: AppColors.blackColor),
+  ),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: AppColors.blueAccentColor,
+    surfaceTintColor: AppColors.blueAccentColor,
+    titleTextStyle: TextStyle(color: AppColors.blackColor),
+  ),
   inputDecorationTheme: const InputDecorationTheme(
     filled: true,
     fillColor: AppColors.whiteColor,
@@ -18,12 +27,26 @@ ThemeData lightTheme = ThemeData(
     backgroundColor: AppColors.blueAccentColor,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
   ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    backgroundColor: AppColors.blueAccentColor,
+    selectedItemColor: AppColors.greenColor,
+    unselectedItemColor: AppColors.greyColor,
+  ),
 );
 
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: AppColors.midnightBlueColor,
-  appBarTheme: const AppBarTheme(backgroundColor: AppColors.midnightBlueColor),
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: AppColors.whiteColor),
+    bodyMedium: TextStyle(color: AppColors.whiteColor),
+    bodySmall: TextStyle(color: AppColors.whiteColor),
+  ),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: AppColors.midnightBlueColor,
+    surfaceTintColor: AppColors.midnightBlueColor,
+    titleTextStyle: TextStyle(color: AppColors.whiteColor),
+  ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: AppColors.filledColor,
@@ -35,5 +58,10 @@ ThemeData darkTheme = ThemeData(
   dialogTheme: DialogThemeData(
     backgroundColor: AppColors.midnightBlueColor,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+  ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    backgroundColor: AppColors.midnightBlueColor,
+    selectedItemColor: AppColors.greenColor,
+    unselectedItemColor: AppColors.greyColor,
   ),
 );

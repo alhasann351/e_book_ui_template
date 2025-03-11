@@ -3,7 +3,7 @@ import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_strings.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/signup_screen.dart';
-import 'package:e_book_ui_template/screens/home_screen/home_screen.dart';
+import 'package:e_book_ui_template/widgets/bottom_nav_bar.dart';
 import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 
@@ -179,7 +179,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const HomeScreen(),
+                                    builder: (context) => const BottomNavBar(),
                                   ),
                                 );
                               },
