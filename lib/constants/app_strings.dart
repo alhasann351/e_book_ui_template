@@ -62,4 +62,8 @@ class AppStrings {
   static const String moreBooks = 'More books';
   static const String profile = 'Profile';
   static const String homeAppbarTitle = 'E-Book';
+  static const String searchBook = 'Search book';
+  static const String recentSearches = 'Recent searches';
+  static const String popularSearches = 'Popular searches';
+  static const String booksSearches = 'Books searches';
 }

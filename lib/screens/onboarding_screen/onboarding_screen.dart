@@ -71,53 +71,61 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomTextButton(
-                      text: AppStrings.skip,
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const GetStartScreen(),
-                          ),
-                        );
-                      },
+                    Flexible(
+                      child: CustomTextButton(
+                        text: AppStrings.skip,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const GetStartScreen(),
+                            ),
+                          );
+                        },
+                      ),
                     ),
-                    SmoothPageIndicator(
-                      controller: _pageController,
-                      count: 4,
-                      axisDirection: Axis.horizontal,
-                      effect: const WormEffect(
-                        activeDotColor: AppColors.greenColor,
+                    Flexible(
+                      child: SmoothPageIndicator(
+                        controller: _pageController,
+                        count: 4,
+                        axisDirection: Axis.horizontal,
+                        effect: const WormEffect(
+                          activeDotColor: AppColors.greenColor,
+                        ),
                       ),
                     ),
                     _currentIndex == 3
-                        ? CustomTextButton(
-                          text: AppStrings.finish,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const GetStartScreen(),
-                              ),
-                            );
-                          },
+                        ? Flexible(
+                          child: CustomTextButton(
+                            text: AppStrings.finish,
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const GetStartScreen(),
+                                ),
+                              );
+                            },
+                          ),
                         )
-                        : IconButton(
-                          color: AppColors.greenColor,
-                          onPressed: () {
-                            _pageController.nextPage(
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.decelerate,
-                            );
-                          },
-                          icon: const SizedBox(
-                            height: 50,
-                            width: 50,
-                            child: CircleAvatar(
-                              backgroundColor: AppColors.greenColor,
-                              child: Icon(
-                                Icons.arrow_forward_rounded,
-                                color: AppColors.whiteColor,
+                        : Flexible(
+                          child: IconButton(
+                            color: AppColors.greenColor,
+                            onPressed: () {
+                              _pageController.nextPage(
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.decelerate,
+                              );
+                            },
+                            icon: const SizedBox(
+                              height: 50,
+                              width: 50,
+                              child: CircleAvatar(
+                                backgroundColor: AppColors.greenColor,
+                                child: Icon(
+                                  Icons.arrow_forward_rounded,
+                                  color: AppColors.whiteColor,
+                                ),
                               ),
                             ),
                           ),

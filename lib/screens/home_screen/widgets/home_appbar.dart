@@ -23,44 +23,48 @@ class HomeAppbar extends StatelessWidget {
           style: AppTextStyles.appBarTitle,
         ),
         actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const NotificationScreen(),
-                ),
-              );
-            },
-            color: AppColors.greenColor,
-            icon: const SizedBox(
-              height: 45,
-              width: 45,
-              child: CircleAvatar(
-                backgroundColor: AppColors.greenColor,
-                child: Icon(
-                  Iconsax.notification_bing_copy,
-                  color: AppColors.whiteColor,
+          Flexible(
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const NotificationScreen(),
+                  ),
+                );
+              },
+              color: AppColors.greenColor,
+              icon: const SizedBox(
+                height: 45,
+                width: 45,
+                child: CircleAvatar(
+                  backgroundColor: AppColors.greenColor,
+                  child: Icon(
+                    Iconsax.notification_bing_copy,
+                    color: AppColors.whiteColor,
+                  ),
                 ),
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CartScreen()),
-              );
-            },
-            color: AppColors.greenColor,
-            icon: const SizedBox(
-              height: 45,
-              width: 45,
-              child: CircleAvatar(
-                backgroundColor: AppColors.greenColor,
-                child: Icon(
-                  Iconsax.shopping_cart_copy,
-                  color: AppColors.whiteColor,
+          Flexible(
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CartScreen()),
+                );
+              },
+              color: AppColors.greenColor,
+              icon: const SizedBox(
+                height: 45,
+                width: 45,
+                child: CircleAvatar(
+                  backgroundColor: AppColors.greenColor,
+                  child: Icon(
+                    Iconsax.shopping_cart_copy,
+                    color: AppColors.whiteColor,
+                  ),
                 ),
               ),
             ),

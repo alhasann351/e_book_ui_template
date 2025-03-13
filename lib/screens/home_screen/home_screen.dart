@@ -1,4 +1,5 @@
 import 'package:e_book_ui_template/screens/home_screen/widgets/home_appbar.dart';
+import 'package:e_book_ui_template/screens/home_screen/widgets/search_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,27 +19,7 @@ class HomeScreen extends StatelessWidget {
             HomeAppbar(),
             Expanded(
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Text(
-                      'data',
-                      style: TextStyle(fontSize: 50, color: Colors.white),
-                    ),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                    Text('data', style: TextStyle(fontSize: 50)),
-                  ],
-                ),
+                child: Column(children: [SearchInput()]),
               ),
             ),
           ],

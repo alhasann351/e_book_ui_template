@@ -223,50 +223,56 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            InkWell(
-                              borderRadius: BorderRadius.circular(10),
-                              onTap: () {},
-                              child: Card(
-                                color: AppColors.whiteColor,
-                                elevation: 8,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset(
-                                    AppImages.appleIcon,
-                                    height: 30,
-                                    width: 30,
+                            Flexible(
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(10),
+                                onTap: () {},
+                                child: Card(
+                                  color: AppColors.whiteColor,
+                                  elevation: 8,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Image.asset(
+                                      AppImages.appleIcon,
+                                      height: 30,
+                                      width: 30,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(10),
-                              onTap: () {},
-                              child: Card(
-                                color: AppColors.whiteColor,
-                                elevation: 8,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset(
-                                    AppImages.facebookIcon,
-                                    height: 30,
-                                    width: 30,
+                            Flexible(
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(10),
+                                onTap: () {},
+                                child: Card(
+                                  color: AppColors.whiteColor,
+                                  elevation: 8,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Image.asset(
+                                      AppImages.facebookIcon,
+                                      height: 30,
+                                      width: 30,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(10),
-                              onTap: () {},
-                              child: Card(
-                                color: AppColors.whiteColor,
-                                elevation: 8,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset(
-                                    AppImages.googleIcon,
-                                    height: 30,
-                                    width: 30,
+                            Flexible(
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(10),
+                                onTap: () {},
+                                child: Card(
+                                  color: AppColors.whiteColor,
+                                  elevation: 8,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Image.asset(
+                                      AppImages.googleIcon,
+                                      height: 30,
+                                      width: 30,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -281,21 +287,26 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              AppStrings.doNotAccount,
-                              maxLines: 1,
-                              style: AppTextStyles.subtitle,
+                            Flexible(
+                              child: Text(
+                                AppStrings.doNotAccount,
+                                maxLines: 1,
+                                style: AppTextStyles.subtitle,
+                              ),
                             ),
-                            CustomTextButton(
-                              text: AppStrings.signUp,
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const SignupScreen(),
-                                  ),
-                                );
-                              },
+                            Flexible(
+                              child: CustomTextButton(
+                                text: AppStrings.signUp,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder:
+                                          (context) => const SignupScreen(),
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                           ],
                         ),

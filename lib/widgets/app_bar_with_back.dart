@@ -15,24 +15,32 @@ class AppBarWithBack extends StatelessWidget {
         child: Row(
           spacing: 10,
           children: [
-            IconButton(
-              color: AppColors.greenColor,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const SizedBox(
-                height: 45,
-                width: 45,
-                child: CircleAvatar(
-                  backgroundColor: AppColors.greenColor,
-                  child: Icon(
-                    Icons.arrow_back_ios_outlined,
-                    color: AppColors.whiteColor,
+            Flexible(
+              child: IconButton(
+                color: AppColors.greenColor,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const SizedBox(
+                  height: 45,
+                  width: 45,
+                  child: CircleAvatar(
+                    backgroundColor: AppColors.greenColor,
+                    child: Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: AppColors.whiteColor,
+                    ),
                   ),
                 ),
               ),
             ),
-            Text(title, style: AppTextStyles.appBarTitle),
+            Expanded(
+              child: Text(
+                title,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyles.appBarTitle,
+              ),
+            ),
           ],
         ),
       ),

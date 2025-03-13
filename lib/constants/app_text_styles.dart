@@ -56,4 +56,26 @@ class AppTextStyles {
     fontFamily: 'amaranth',
     overflow: TextOverflow.ellipsis,
   );
+
+  static TextStyle mediumTextStyle = const TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+  );
+
+  static TextStyle bookNameStyle = const TextStyle(
+    fontSize: 14,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+  );
+
+  static TextStyle bookPriceStyle = const TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+    color: AppColors.greenColor,
+  );
 }

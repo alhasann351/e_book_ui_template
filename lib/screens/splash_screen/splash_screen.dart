@@ -52,10 +52,12 @@ class _SplashScreenState extends State<SplashScreen> {
                     width: 50,
                     fit: BoxFit.cover,
                   ),
-                  Text(
-                    AppStrings.appTitle,
-                    maxLines: 1,
-                    style: AppTextStyles.title,
+                  Flexible(
+                    child: Text(
+                      AppStrings.appTitle,
+                      maxLines: 1,
+                      style: AppTextStyles.title,
+                    ),
                   ),
                 ],
               ),
