@@ -66,4 +66,6 @@ class AppStrings {
   static const String recentSearches = 'Recent searches';
   static const String popularSearches = 'Popular searches';
   static const String booksSearches = 'Books searches';
+  static const String specialDiscounts = 'Special discounts';
+  static const String seeAll = 'See all';
 }

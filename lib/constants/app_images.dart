@@ -15,4 +15,7 @@ class AppImages {
       'assets/images/forgot_password_image.jpg';
   static const String otpVerificationImage =
       'assets/images/otp_verification_image.jpg';
+  static const String discountImage1 = 'assets/images/discount_image_1.png';
+  static const String discountImage2 = 'assets/images/discount_image_2.png';
+  static const String discountImage3 = 'assets/images/discount_image_3.png';
 }
