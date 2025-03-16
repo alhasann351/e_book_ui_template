@@ -78,4 +78,18 @@ class AppTextStyles {
     overflow: TextOverflow.ellipsis,
     color: AppColors.greenColor,
   );
+
+  static TextStyle discountTitleStyle = const TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    overflow: TextOverflow.ellipsis,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle discountSubtitleStyle = const TextStyle(
+    fontSize: 14,
+    fontFamily: 'amaranth',
+    color: AppColors.greyColor,
+    overflow: TextOverflow.ellipsis,
+  );
 }
