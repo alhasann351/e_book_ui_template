@@ -9,9 +9,9 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_images.dart';
-import '../../discount_screen/widgets/discount_10_percentage_screen.dart';
-import '../../discount_screen/widgets/discount_30_percentage_screen.dart';
-import '../../discount_screen/widgets/discount_50_percentage_screen.dart';
+import '../../discount_screen/widgets/discount_10_percent_screen.dart';
+import '../../discount_screen/widgets/discount_30_percent_screen.dart';
+import '../../discount_screen/widgets/discount_50_percent_screen.dart';
 
 class DiscountSlider extends StatefulWidget {
   const DiscountSlider({super.key});
@@ -22,9 +22,9 @@ class DiscountSlider extends StatefulWidget {
 
 class _DiscountSliderState extends State<DiscountSlider> {
   final discountScreens = [
-    const Discount10PercentageScreen(),
-    const Discount30PercentageScreen(),
-    const Discount50PercentageScreen(),
+    const Discount10PercentScreen(),
+    const Discount30PercentScreen(),
+    const Discount50PercentScreen(),
   ];
   final discountImages = [
     AppImages.discountImage1,

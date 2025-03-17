@@ -11,11 +11,21 @@ class RatingIcons extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(Icons.star, size: 20, color: AppColors.yellowColor),
-        Icon(Icons.star, size: 20, color: AppColors.yellowColor),
-        Icon(Icons.star, size: 20, color: AppColors.yellowColor),
-        Icon(Icons.star, size: 20, color: AppColors.yellowColor),
-        Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        Flexible(
+          child: Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        ),
+        Flexible(
+          child: Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        ),
+        Flexible(
+          child: Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        ),
+        Flexible(
+          child: Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        ),
+        Flexible(
+          child: Icon(Icons.star, size: 20, color: AppColors.yellowColor),
+        ),
       ],
     );
   }

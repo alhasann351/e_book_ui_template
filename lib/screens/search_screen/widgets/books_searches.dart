@@ -48,77 +48,76 @@ class BooksSearches extends StatelessWidget {
                         child: ZoomIn(
                           animate: true,
                           duration: const Duration(seconds: 4),
-                          child: Card(
-                            elevation: 10,
-                            clipBehavior: Clip.antiAlias,
-                            child: Column(
-                              children: [
-                                Image.asset(
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.asset(
                                   booksSearchItems[index].bookImagePath,
                                   fit: BoxFit.cover,
                                   height: 150,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 8,
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  child: Text(
-                                    booksSearchItems[index].bookName,
-                                    textAlign: TextAlign.center,
-                                    maxLines: 1,
-                                    style: AppTextStyles.bookNameStyle,
-                                  ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 8,
+                                  left: 8,
+                                  right: 8,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  child: Text(
-                                    booksSearchItems[index].bookWriterName,
-                                    textAlign: TextAlign.center,
-                                    maxLines: 1,
-                                    style: AppTextStyles.bottomNavBarStyle,
-                                  ),
+                                child: Text(
+                                  booksSearchItems[index].bookName,
+                                  textAlign: TextAlign.center,
+                                  maxLines: 1,
+                                  style: AppTextStyles.bookNameStyle,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 8,
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      const RatingIcons(),
-                                      Text(
-                                        '(${booksSearchItems[index].bookRatingNumber.toString()})',
-                                        textAlign: TextAlign.center,
-                                        maxLines: 1,
-                                        style: AppTextStyles.bottomNavBarStyle,
-                                      ),
-                                    ],
-                                  ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 8,
+                                  right: 8,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        'Price: \$${booksSearchItems[index].bookPrice.toString()}',
-                                        textAlign: TextAlign.center,
-                                        maxLines: 1,
-                                        style: AppTextStyles.bookPriceStyle,
-                                      ),
-                                    ],
-                                  ),
+                                child: Text(
+                                  booksSearchItems[index].bookWriterName,
+                                  textAlign: TextAlign.center,
+                                  maxLines: 1,
+                                  style: AppTextStyles.bottomNavBarStyle,
                                 ),
-                              ],
-                            ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 8,
+                                  left: 8,
+                                  right: 8,
+                                ),
+                                child: Column(
+                                  children: [
+                                    const RatingIcons(),
+                                    Text(
+                                      '(${booksSearchItems[index].bookRatingNumber.toString()})',
+                                      textAlign: TextAlign.center,
+                                      maxLines: 1,
+                                      style: AppTextStyles.bottomNavBarStyle,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 8,
+                                  right: 8,
+                                ),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      'Price: \$${booksSearchItems[index].bookPrice.toString()}',
+                                      textAlign: TextAlign.center,
+                                      maxLines: 1,
+                                      style: AppTextStyles.bookPriceStyle,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

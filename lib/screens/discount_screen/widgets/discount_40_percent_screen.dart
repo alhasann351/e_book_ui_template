@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Discount40PercentageScreen extends StatelessWidget {
-  const Discount40PercentageScreen({super.key});
+class Discount40PercentScreen extends StatelessWidget {
+  const Discount40PercentScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

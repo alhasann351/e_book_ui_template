@@ -3,6 +3,16 @@ import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_strings.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
 import 'package:e_book_ui_template/models/discount_item.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_10_percent_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_20_percent_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_30_percent_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_40_percent_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_50_percent_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_new_user_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/flash_sell_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/monthly_discount_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/new_book_discount_screen.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/weekly_discount_screen.dart';
 import 'package:e_book_ui_template/widgets/app_bar_with_back.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -12,6 +22,19 @@ class DiscountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final allDiscountScreen = [
+      const Discount10PercentScreen(),
+      const Discount20PercentScreen(),
+      const Discount30PercentScreen(),
+      const Discount40PercentScreen(),
+      const Discount50PercentScreen(),
+      const DiscountNewUserScreen(),
+      const WeeklyDiscountScreen(),
+      const MonthlyDiscountScreen(),
+      const FlashSellScreen(),
+      const NewBookDiscountScreen(),
+    ];
+
     return Scaffold(
       body: Stack(
         children: [
@@ -28,7 +51,14 @@ class DiscountScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return InkWell(
                     borderRadius: BorderRadius.circular(10),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => allDiscountScreen[index],
+                        ),
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: ZoomIn(

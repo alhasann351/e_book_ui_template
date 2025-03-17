@@ -92,4 +92,15 @@ class AppTextStyles {
     color: AppColors.greyColor,
     overflow: TextOverflow.ellipsis,
   );
+
+  static TextStyle discountBookPriceStyle = const TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+    color: AppColors.greenColor,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: AppColors.redColor,
+    decorationThickness: 3,
+  );
 }
