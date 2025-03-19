@@ -8,6 +8,7 @@ import 'package:e_book_ui_template/screens/onboarding_screen/widgets/onboarding_
 import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constants/app_strings.dart';
@@ -123,7 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               child: CircleAvatar(
                                 backgroundColor: AppColors.greenColor,
                                 child: Icon(
-                                  Icons.arrow_forward_rounded,
+                                  Iconsax.arrow_right_1_copy,
                                   color: AppColors.whiteColor,
                                 ),
                               ),

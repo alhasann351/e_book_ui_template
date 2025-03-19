@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/password_create_successful_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/app_images.dart';
@@ -18,6 +19,7 @@ class CreatePasswordScreen extends StatefulWidget {
 
 class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
   bool showPassword = true;
+  bool showConfirmPassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +88,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                               hintText: AppStrings.password,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.lock_outline_rounded,
+                                Iconsax.lock_1_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -99,8 +101,8 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                                 radius: 10,
                                 child: Icon(
                                   showPassword
-                                      ? Icons.visibility_off_outlined
-                                      : Icons.visibility_outlined,
+                                      ? Iconsax.eye_slash_copy
+                                      : Iconsax.eye_copy,
                                   color: AppColors.greyColor,
                                   size: 28,
                                 ),
@@ -130,26 +132,26 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                             keyboardType: TextInputType.text,
                             cursorColor: AppColors.greenColor,
                             style: AppTextStyles.inputTextStyle,
-                            obscureText: showPassword,
+                            obscureText: showConfirmPassword,
                             decoration: InputDecoration(
                               hintText: AppStrings.confirmPassword,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.lock_outline_rounded,
+                                Iconsax.lock_1_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
                               suffixIcon: InkWell(
                                 onTap: () {
                                   setState(() {
-                                    showPassword = !showPassword;
+                                    showConfirmPassword = !showConfirmPassword;
                                   });
                                 },
                                 radius: 10,
                                 child: Icon(
-                                  showPassword
-                                      ? Icons.visibility_off_outlined
-                                      : Icons.visibility_outlined,
+                                  showConfirmPassword
+                                      ? Iconsax.eye_slash_copy
+                                      : Iconsax.eye_copy,
                                   color: AppColors.greyColor,
                                   size: 28,
                                 ),

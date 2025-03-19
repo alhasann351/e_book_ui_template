@@ -6,6 +6,7 @@ import 'package:e_book_ui_template/screens/authentication_screen/signup_screen.d
 import 'package:e_book_ui_template/widgets/bottom_nav_bar.dart';
 import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../constants/app_images.dart';
 import '../../widgets/app_bar_with_back.dart';
@@ -72,7 +73,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                               hintText: AppStrings.email,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Iconsax.sms_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -106,7 +107,7 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                               hintText: AppStrings.password,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.lock_outline_rounded,
+                                Iconsax.lock_1_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -119,8 +120,8 @@ class _SignInEmailScreenState extends State<SignInEmailScreen> {
                                 radius: 10,
                                 child: Icon(
                                   showPassword
-                                      ? Icons.visibility_off_outlined
-                                      : Icons.visibility_outlined,
+                                      ? Iconsax.eye_slash_copy
+                                      : Iconsax.eye_copy,
                                   color: AppColors.greyColor,
                                   size: 28,
                                 ),

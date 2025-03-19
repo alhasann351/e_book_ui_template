@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/sign_in_email_screen.dart';
 import 'package:e_book_ui_template/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -140,7 +141,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               hintText: AppStrings.name,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.person_2_outlined,
+                                Iconsax.user_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -173,7 +174,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               hintText: AppStrings.email,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Iconsax.sms_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -207,7 +208,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               hintText: AppStrings.password,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.lock_outline_rounded,
+                                Iconsax.lock_1_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -220,8 +221,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 radius: 10,
                                 child: Icon(
                                   showPassword
-                                      ? Icons.visibility_off_outlined
-                                      : Icons.visibility_outlined,
+                                      ? Iconsax.eye_slash_copy
+                                      : Iconsax.eye_copy,
                                   color: AppColors.greyColor,
                                   size: 28,
                                 ),

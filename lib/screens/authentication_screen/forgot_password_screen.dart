@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/screens/authentication_screen/otp_verification_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/app_images.dart';
@@ -72,7 +73,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                               hintText: AppStrings.phone,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Iconsax.mobile_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),
@@ -114,7 +115,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                               hintText: AppStrings.email,
                               hintStyle: AppTextStyles.hintTextStyle,
                               prefixIcon: const Icon(
-                                Icons.email_outlined,
+                                Iconsax.sms_copy,
                                 size: 28,
                                 color: AppColors.greyColor,
                               ),

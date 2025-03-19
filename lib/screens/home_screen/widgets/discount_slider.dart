@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_book_ui_template/constants/app_strings.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
+import 'package:e_book_ui_template/models/discount_category.dart';
 import 'package:e_book_ui_template/screens/discount_screen/discount_screen.dart';
 import 'package:e_book_ui_template/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
@@ -9,9 +10,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_images.dart';
-import '../../discount_screen/widgets/discount_10_percent_screen.dart';
-import '../../discount_screen/widgets/discount_30_percent_screen.dart';
-import '../../discount_screen/widgets/discount_50_percent_screen.dart';
+import '../../discount_screen/widgets/discount_items_screen.dart';
 
 class DiscountSlider extends StatefulWidget {
   const DiscountSlider({super.key});
@@ -21,11 +20,6 @@ class DiscountSlider extends StatefulWidget {
 }
 
 class _DiscountSliderState extends State<DiscountSlider> {
-  final discountScreens = [
-    const Discount10PercentScreen(),
-    const Discount30PercentScreen(),
-    const Discount50PercentScreen(),
-  ];
   final discountImages = [
     AppImages.discountImage1,
     AppImages.discountImage2,
@@ -92,7 +86,13 @@ class _DiscountSliderState extends State<DiscountSlider> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => discountScreens[index],
+                        builder:
+                            (context) => DiscountItemsScreen(
+                              items: discountCategories[index].items,
+                              discountItemAppbarTitle:
+                                  discountCategories[index]
+                                      .discountItemAppbarTitle,
+                            ),
                       ),
                     );
                   },

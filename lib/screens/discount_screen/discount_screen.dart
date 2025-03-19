@@ -2,17 +2,9 @@ import 'package:animate_do/animate_do.dart';
 import 'package:e_book_ui_template/constants/app_colors.dart';
 import 'package:e_book_ui_template/constants/app_strings.dart';
 import 'package:e_book_ui_template/constants/app_text_styles.dart';
-import 'package:e_book_ui_template/models/discount_item.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_10_percent_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_20_percent_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_30_percent_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_40_percent_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_50_percent_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_new_user_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/flash_sell_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/monthly_discount_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/new_book_discount_screen.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/weekly_discount_screen.dart';
+import 'package:e_book_ui_template/models/discount_category.dart';
+import 'package:e_book_ui_template/models/discount_name.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_items_screen.dart';
 import 'package:e_book_ui_template/widgets/app_bar_with_back.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -22,19 +14,6 @@ class DiscountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final allDiscountScreen = [
-      const Discount10PercentScreen(),
-      const Discount20PercentScreen(),
-      const Discount30PercentScreen(),
-      const Discount40PercentScreen(),
-      const Discount50PercentScreen(),
-      const DiscountNewUserScreen(),
-      const WeeklyDiscountScreen(),
-      const MonthlyDiscountScreen(),
-      const FlashSellScreen(),
-      const NewBookDiscountScreen(),
-    ];
-
     return Scaffold(
       body: Stack(
         children: [
@@ -55,7 +34,13 @@ class DiscountScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => allDiscountScreen[index],
+                          builder:
+                              (context) => DiscountItemsScreen(
+                                items: discountCategories[index].items,
+                                discountItemAppbarTitle:
+                                    discountCategories[index]
+                                        .discountItemAppbarTitle,
+                              ),
                         ),
                       );
                     },
@@ -82,7 +67,7 @@ class DiscountScreen extends StatelessWidget {
                                   top: 0,
                                   right: 40,
                                   child: Text(
-                                    discountItems[index].title,
+                                    discountName[index].title,
                                     maxLines: 1,
                                     style: AppTextStyles.discountTitleStyle,
                                   ),
@@ -92,7 +77,7 @@ class DiscountScreen extends StatelessWidget {
                                   top: 25,
                                   right: 40,
                                   child: Text(
-                                    discountItems[index].subtitle,
+                                    discountName[index].subtitle,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: AppTextStyles.discountSubtitleStyle,
