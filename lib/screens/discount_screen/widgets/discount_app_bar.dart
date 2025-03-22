@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../constants/app_colors.dart';
+import 'filter_bottom_sheet.dart';
 
 class DiscountAppBar extends StatelessWidget {
   final String title;
@@ -47,7 +48,16 @@ class DiscountAppBar extends StatelessWidget {
             Flexible(
               child: IconButton(
                 color: AppColors.greenColor,
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (context) {
+                      return const FilterBottomSheet();
+                    },
+                  );
+                },
                 icon: const SizedBox(
                   height: 45,
                   width: 45,

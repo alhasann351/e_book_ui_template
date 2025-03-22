@@ -1,5 +1,4 @@
 import 'package:e_book_ui_template/constants/app_images.dart';
-import 'package:e_book_ui_template/screens/cart_screen/cart_screen.dart';
 import 'package:e_book_ui_template/screens/notification_screen/notification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -7,6 +6,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_strings.dart';
 import '../../../constants/app_text_styles.dart';
+import '../../cart_screen/cart_screen.dart';
 
 class HomeAppbar extends StatelessWidget {
   const HomeAppbar({super.key});
