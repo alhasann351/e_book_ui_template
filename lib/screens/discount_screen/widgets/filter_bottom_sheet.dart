@@ -61,6 +61,13 @@ class FilterBottomSheet extends StatelessWidget {
                     style: AppTextStyles.appBarTitle,
                   ),
                 ),
+                Align(
+                  alignment: Alignment.center, // Centers the Text
+                  child: Text(
+                    AppStrings.filter,
+                    style: AppTextStyles.appBarTitle,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Expanded(
                   child: ListView(
