@@ -81,6 +81,10 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                         AppStrings.sequence,
                         style: AppTextStyles.filterTitleStyle,
                       ),
+                      Text(
+                        AppStrings.sequence,
+                        style: AppTextStyles.filterTitleStyle,
+                      ),
                       const SizedBox(height: 10),
                       GridView.builder(
                         shrinkWrap: true,
