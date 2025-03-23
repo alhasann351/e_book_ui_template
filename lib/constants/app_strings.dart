@@ -71,4 +71,5 @@ class AppStrings {
   static const String discount10Percentage = '10% discount';
   static const String reset = 'Reset';
   static const String filter = 'Filter';
+  static const String sequence = 'Sequence';
 }

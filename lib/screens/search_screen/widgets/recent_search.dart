@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:e_book_ui_template/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/app_colors.dart';
 import '../../../constants/app_strings.dart';
 import '../../../constants/app_text_styles.dart';
 import '../../../models/recent_search_item.dart';
@@ -40,17 +40,9 @@ class RecentSearch extends StatelessWidget {
                 crossAxisSpacing: 10,
               ),
               itemBuilder: (context, index) {
-                return OutlinedButton(
+                return CustomOutlineButton(
+                  text: recentSearchItems[index].item,
                   onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    foregroundColor: AppColors.greenColor,
-                    side: const BorderSide(color: AppColors.greenColor),
-                  ),
-                  child: Text(
-                    recentSearchItems[index].item,
-                    style: AppTextStyles.body,
-                  ),
                 );
               },
             ),

@@ -16,6 +16,13 @@ class AppTextStyles {
     overflow: TextOverflow.ellipsis,
   );
 
+  static TextStyle filterTitleStyle = const TextStyle(
+    fontSize: 18,
+    fontFamily: 'amaranth',
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+  );
+
   static TextStyle subtitle = const TextStyle(
     fontSize: 16,
     fontFamily: 'amaranth',

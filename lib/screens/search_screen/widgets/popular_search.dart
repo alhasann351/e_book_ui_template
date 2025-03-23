@@ -1,10 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/app_colors.dart';
 import '../../../constants/app_strings.dart';
 import '../../../constants/app_text_styles.dart';
 import '../../../models/popular_search_item.dart';
+import '../../../widgets/custom_outline_button.dart';
 
 class PopularSearch extends StatelessWidget {
   const PopularSearch({super.key});
@@ -40,17 +40,9 @@ class PopularSearch extends StatelessWidget {
                 crossAxisSpacing: 10,
               ),
               itemBuilder: (context, index) {
-                return OutlinedButton(
+                return CustomOutlineButton(
+                  text: popularSearchItems[index].item,
                   onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    foregroundColor: AppColors.greenColor,
-                    side: const BorderSide(color: AppColors.greenColor),
-                  ),
-                  child: Text(
-                    popularSearchItems[index].item,
-                    style: AppTextStyles.body,
-                  ),
                 );
               },
             ),
