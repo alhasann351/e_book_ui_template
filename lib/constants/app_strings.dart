@@ -72,4 +72,10 @@ class AppStrings {
   static const String reset = 'Reset';
   static const String filter = 'Filter';
   static const String sequence = 'Sequence';
+  static const String category = 'Category';
+  static const String writer = 'Writer';
+  static const String publication = 'Publication';
+  static const String rating = 'Rating';
+  static const String price = 'Price';
+  static const String apply = 'Apply';
 }
