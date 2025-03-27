@@ -1,5 +1,5 @@
 import 'package:e_book_ui_template/screens/category_screen/category_screen.dart';
-import 'package:e_book_ui_template/screens/home_screen/widgets/discount_slider.dart';
+import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_slider.dart';
 import 'package:e_book_ui_template/screens/home_screen/widgets/home_appbar.dart';
 import 'package:e_book_ui_template/screens/home_screen/widgets/search_input.dart';
 import 'package:flutter/material.dart';

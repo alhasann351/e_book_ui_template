@@ -10,7 +10,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_images.dart';
-import '../../discount_screen/widgets/discount_items_screen.dart';
+import 'discount_items_screen.dart';
 
 class DiscountSlider extends StatefulWidget {
   const DiscountSlider({super.key});

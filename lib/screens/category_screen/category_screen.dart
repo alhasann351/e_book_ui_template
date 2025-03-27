@@ -47,24 +47,33 @@ class CategoryScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: MediaQuery.of(context).size.width > 600 ? 6 : 4,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
               ),
-              itemCount: categoryItems.length,
+              itemCount: 8,
               itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Image.asset(
-                      'assets/icons/app_icon.png',
-                      height: 50,
-                      width: 50,
-                      fit: BoxFit.cover,
-                    ),
-                    Text(
-                      categoryItems[index].title,
-                      style: AppTextStyles.bottomNavBarStyle,
-                    ),
-                  ],
+                return GestureDetector(
+                  onTap: () {},
+                  child: Column(
+                    children: [
+                      Flexible(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.transparent,
+                          foregroundImage: AssetImage(
+                            categoryItems[index].imagePath,
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: Text(
+                          categoryItems[index].title,
+                          style: AppTextStyles.bottomNavBarStyle,
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
