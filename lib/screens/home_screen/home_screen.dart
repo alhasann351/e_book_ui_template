@@ -1,3 +1,4 @@
+import 'package:e_book_ui_template/screens/category_screen/category_screen.dart';
 import 'package:e_book_ui_template/screens/home_screen/widgets/discount_slider.dart';
 import 'package:e_book_ui_template/screens/home_screen/widgets/home_appbar.dart';
 import 'package:e_book_ui_template/screens/home_screen/widgets/search_input.dart';
@@ -20,7 +21,9 @@ class HomeScreen extends StatelessWidget {
             HomeAppbar(),
             Expanded(
               child: SingleChildScrollView(
-                child: Column(children: [SearchInput(), DiscountSlider()]),
+                child: Column(
+                  children: [SearchInput(), DiscountSlider(), CategoryScreen()],
+                ),
               ),
             ),
           ],
