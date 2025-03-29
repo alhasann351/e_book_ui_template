@@ -72,6 +72,12 @@ class CategoryScreen extends StatelessWidget {
                           style: AppTextStyles.bottomNavBarStyle,
                         ),
                       ),
+                      Flexible(
+                        child: Text(
+                          categoryItems[index].title,
+                          style: AppTextStyles.bottomNavBarStyle,
+                        ),
+                      ),
                     ],
                   ),
                 );
