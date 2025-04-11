@@ -2,12 +2,12 @@ import 'package:e_book_ui_template/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../../constants/app_colors.dart';
-import 'filter_bottom_sheet.dart';
+import '../constants/app_colors.dart';
+import '../screens/discount_screen/widgets/filter_bottom_sheet.dart';
 
-class DiscountAppBar extends StatelessWidget {
+class AppBarWithFilter extends StatelessWidget {
   final String title;
-  const DiscountAppBar({super.key, required this.title});
+  const AppBarWithFilter({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:e_book_ui_template/screens/discount_screen/widgets/discount_app_bar.dart';
+import 'package:e_book_ui_template/widgets/app_bar_with_filter.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/app_text_styles.dart';
@@ -24,7 +24,7 @@ class DiscountItemsScreen extends StatelessWidget {
             SlideInLeft(
               animate: true,
               duration: const Duration(seconds: 2),
-              child: DiscountAppBar(title: discountItemAppbarTitle),
+              child: AppBarWithFilter(title: discountItemAppbarTitle),
             ),
             Expanded(
               child: Padding(

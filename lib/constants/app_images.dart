@@ -18,4 +18,5 @@ class AppImages {
   static const String discountImage1 = 'assets/images/discount_image_1.png';
   static const String discountImage2 = 'assets/images/discount_image_2.png';
   static const String discountImage3 = 'assets/images/discount_image_3.png';
+  static const String top10 = 'assets/icons/top_10.png';
 }

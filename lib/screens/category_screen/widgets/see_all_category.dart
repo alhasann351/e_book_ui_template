@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../constants/app_strings.dart';
 import '../../../constants/app_text_styles.dart';
 import '../../../models/category_item.dart';
+import '../../../models/category_name.dart';
 import '../../../widgets/app_bar_with_back.dart';
+import 'category_book_screen.dart';
 
 class SeeAllCategory extends StatelessWidget {
   const SeeAllCategory({super.key});
@@ -28,39 +30,56 @@ class SeeAllCategory extends StatelessWidget {
                   right: 20,
                   bottom: 10,
                 ),
-                child: GridView.builder(
-                  padding: EdgeInsets.zero,
-                  shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount:
-                        MediaQuery.of(context).size.width > 600 ? 6 : 4,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                  ),
-                  itemCount: categoryItems.length,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Flexible(
-                            child: CircleAvatar(
-                              backgroundColor: Colors.transparent,
-                              foregroundImage: AssetImage(
-                                categoryItems[index].imagePath,
+                child: ZoomIn(
+                  animate: true,
+                  duration: const Duration(seconds: 4),
+                  child: GridView.builder(
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount:
+                          MediaQuery.of(context).size.width > 600 ? 6 : 4,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    ),
+                    itemCount: categoryItems.length,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (context) => CategoryBookScreen(
+                                    items: categoryShowBooks[index].items,
+                                    categoryNameAppbarTitle:
+                                        categoryShowBooks[index]
+                                            .categoryNameAppbarTitle,
+                                  ),
+                            ),
+                          );
+                        },
+                        child: Column(
+                          children: [
+                            Flexible(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.transparent,
+                                foregroundImage: AssetImage(
+                                  categoryItems[index].imagePath,
+                                ),
                               ),
                             ),
-                          ),
-                          Flexible(
-                            child: Text(
-                              categoryItems[index].title,
-                              style: AppTextStyles.bottomNavBarStyle,
+                            Flexible(
+                              child: Text(
+                                categoryItems[index].title,
+                                style: AppTextStyles.bottomNavBarStyle,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

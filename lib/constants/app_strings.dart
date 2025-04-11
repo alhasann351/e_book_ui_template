@@ -78,4 +78,5 @@ class AppStrings {
   static const String rating = 'Rating';
   static const String price = 'Price';
   static const String apply = 'Apply';
+  static const String topBestSellers = 'Top 10 sellers';
 }

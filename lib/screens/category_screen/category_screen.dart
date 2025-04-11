@@ -1,10 +1,12 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:e_book_ui_template/models/category_item.dart';
+import 'package:e_book_ui_template/models/category_name.dart';
+import 'package:e_book_ui_template/screens/category_screen/widgets/category_book_screen.dart';
 import 'package:e_book_ui_template/screens/category_screen/widgets/see_all_category.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_strings.dart';
 import '../../constants/app_text_styles.dart';
+import '../../models/category_item.dart';
 import '../../widgets/custom_text_button.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -55,7 +57,20 @@ class CategoryScreen extends StatelessWidget {
               itemCount: 8,
               itemBuilder: (context, index) {
                 return GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:
+                            (context) => CategoryBookScreen(
+                              items: categoryShowBooks[index].items,
+                              categoryNameAppbarTitle:
+                                  categoryShowBooks[index]
+                                      .categoryNameAppbarTitle,
+                            ),
+                      ),
+                    );
+                  },
                   child: Column(
                     children: [
                       Flexible(
@@ -64,12 +79,6 @@ class CategoryScreen extends StatelessWidget {
                           foregroundImage: AssetImage(
                             categoryItems[index].imagePath,
                           ),
-                        ),
-                      ),
-                      Flexible(
-                        child: Text(
-                          categoryItems[index].title,
-                          style: AppTextStyles.bottomNavBarStyle,
                         ),
                       ),
                       Flexible(
