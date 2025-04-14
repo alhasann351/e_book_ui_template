@@ -71,6 +71,14 @@ class AppTextStyles {
     overflow: TextOverflow.ellipsis,
   );
 
+  static TextStyle topSellerRankTextStyle = const TextStyle(
+    fontSize: 16,
+    fontFamily: 'amaranth',
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
+  );
+
   static TextStyle bookNameStyle = const TextStyle(
     fontSize: 14,
     fontFamily: 'amaranth',

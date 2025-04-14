@@ -8,6 +8,7 @@ import '../../../constants/app_text_styles.dart';
 import '../../../models/category_item.dart';
 import '../../../widgets/app_bar_with_filter.dart';
 import '../../../widgets/rating_icons.dart';
+import '../../top_10_sellers_screen/top_10_sellers_screen.dart';
 
 class CategoryBookScreen extends StatelessWidget {
   final List<CategoryItem> items;
@@ -48,42 +49,53 @@ class CategoryBookScreen extends StatelessWidget {
                           child: SizedBox(
                             width: double.infinity,
                             height: 50,
-                            child: Card(
-                              elevation: 2,
-                              clipBehavior: Clip.antiAlias,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    top: 5,
-                                    bottom: 5,
-                                    left: 10,
-                                    child: Image.asset(
-                                      AppImages.top10,
-                                      height: 32,
-                                      width: 32,
-                                      fit: BoxFit.cover,
-                                    ),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder:
+                                        (context) => const Top10SellersScreen(),
                                   ),
-                                  const SizedBox(width: 10),
-                                  Positioned(
-                                    left: 50,
-                                    top: 10,
-                                    right: 40,
-                                    child: Text(
-                                      AppStrings.topBestSellers,
-                                      maxLines: 1,
-                                      style: AppTextStyles.bookNameStyle,
+                                );
+                              },
+                              child: Card(
+                                elevation: 2,
+                                clipBehavior: Clip.antiAlias,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      top: 5,
+                                      bottom: 5,
+                                      left: 10,
+                                      child: Image.asset(
+                                        AppImages.top10,
+                                        height: 32,
+                                        width: 32,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                  ),
-                                  const Positioned(
-                                    right: 5,
-                                    top: 10,
-                                    child: Icon(
-                                      Iconsax.arrow_right_2,
-                                      size: 25,
+                                    const SizedBox(width: 10),
+                                    Positioned(
+                                      left: 50,
+                                      top: 10,
+                                      right: 40,
+                                      child: Text(
+                                        AppStrings.topBestSellers,
+                                        maxLines: 1,
+                                        style: AppTextStyles.bookNameStyle,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    const Positioned(
+                                      right: 5,
+                                      top: 10,
+                                      child: Icon(
+                                        Iconsax.arrow_right_2,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
